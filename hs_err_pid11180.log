@@ -1,0 +1,163 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=11180, tid=4840
+#
+# JRE version:  (8.0_60-b27) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.60-b23 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000029e0000):  JavaThread "Unknown thread" [_thread_in_vm, id=4840, stack(0x0000000002d50000,0x0000000002e50000)]
+
+Stack: [0x0000000002d50000,0x0000000002e50000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000029e0000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=4840, stack(0x0000000002d50000,0x0000000002e50000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5580000, 0x00000000d8000000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5580000,0x00000000d5626670,0x00000000d7600000)
+  from space 5120K, 0% used [0x00000000d7b00000,0x00000000d7b00000,0x00000000d8000000)
+  to   space 5120K, 0% used [0x00000000d7600000,0x00000000d7600000,0x00000000d7b00000)
+ ParOldGen       total 87552K, used 0K [0x0000000080000000, 0x0000000085580000, 0x00000000d5580000)
+  object space 87552K, 0% used [0x0000000080000000,0x0000000080000000,0x0000000085580000)
+ Metaspace       used 767K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012210000,0x0000000012620000] byte_map_base: 0x0000000011e10000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005397a5b0
+ Begin Bits: [0x0000000012b50000, 0x0000000014b50000)
+ End Bits:   [0x0000000014b50000, 0x0000000016b50000)
+
+Polling page: 0x0000000002350000
+
+CodeCache: size=245760Kb used=327Kb max_used=327Kb free=245432Kb
+ bounds [0x0000000002e50000, 0x00000000030c0000, 0x0000000011e50000]
+ total_blobs=56 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.020 loading class java/lang/Short
+Event: 0.020 loading class java/lang/Short done
+Event: 0.020 loading class java/lang/Integer
+Event: 0.020 loading class java/lang/Integer done
+Event: 0.020 loading class java/lang/Long
+Event: 0.020 loading class java/lang/Long done
+Event: 0.020 loading class java/lang/NullPointerException
+Event: 0.021 loading class java/lang/NullPointerException done
+Event: 0.021 loading class java/lang/ArithmeticException
+Event: 0.021 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013f190000 - 0x000000013f1c7000 	C:\Program Files\Java\jdk1.8.0_60\bin\java.exe
+0x00000000777a0000 - 0x000000007794a000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x0000000077580000 - 0x000000007769f000 	C:\WINDOWS\system32\kernel32.dll
+0x000007fefd580000 - 0x000007fefd5ea000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x0000000075180000 - 0x0000000075209000 	C:\WINDOWS\System32\SYSFER.DLL
+0x000007fefdec0000 - 0x000007fefdf9b000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x000007fefe740000 - 0x000007fefe7df000 	C:\WINDOWS\system32\msvcrt.dll
+0x000007fefe1f0000 - 0x000007fefe20f000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x000007fefeaa0000 - 0x000007fefebcd000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00000000776a0000 - 0x000000007779a000 	C:\WINDOWS\system32\USER32.dll
+0x000007fefde50000 - 0x000007fefdeb7000 	C:\WINDOWS\system32\GDI32.dll
+0x000007feffa00000 - 0x000007feffa0e000 	C:\WINDOWS\system32\LPK.dll
+0x000007fefe7e0000 - 0x000007fefe8ab000 	C:\WINDOWS\system32\USP10.dll
+0x000007fefb7d0000 - 0x000007fefb9c4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefe6c0000 - 0x000007fefe731000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x000007fefe410000 - 0x000007fefe43e000 	C:\WINDOWS\system32\IMM32.DLL
+0x000007fefe080000 - 0x000007fefe189000 	C:\WINDOWS\system32\MSCTF.dll
+0x000007fefd390000 - 0x000007fefd3fb000 	C:\PROGRA~1\Citrix\System32\MFAPHOOK64.DLL
+0x000007fefd2b0000 - 0x000007fefd2e5000 	C:\Program Files\Citrix\ICAService\picaFullScreenHookX64.dll
+0x000007fefcb60000 - 0x000007fefcb9c000 	C:\Program Files\Citrix\ICAService\ShellHook64.dll
+0x000007fefe440000 - 0x000007fefe63c000 	C:\WINDOWS\system32\ole32.dll
+0x000007fefec70000 - 0x000007feff9fb000 	C:\WINDOWS\system32\SHELL32.dll
+0x000007fefd090000 - 0x000007fefd223000 	C:\Program Files\Citrix\ICAService\SCardHook64.dll
+0x000007fefd280000 - 0x000007fefd2a6000 	C:\Program Files\Citrix\ICAService\cxinjime64.dll
+0x000007fefcba0000 - 0x000007fefcc16000 	C:\Program Files\Citrix\ICAService\PicaWtsHook64.dll
+0x000007fefc980000 - 0x000007fefcb57000 	C:\Program Files (x86)\dynatrace\oneagent\agent\lib64\oneagentproc.dll
+0x000007fefd270000 - 0x000007fefd273000 	C:\WINDOWS\system32\api-ms-win-core-synch-l1-2-0.DLL
+0x000000005dce0000 - 0x000000005ddb2000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\msvcr100.dll
+0x0000000053170000 - 0x00000000539f9000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\server\jvm.dll
+0x000007fef8100000 - 0x000007fef8109000 	C:\WINDOWS\system32\WSOCK32.dll
+0x000007fefe210000 - 0x000007fefe25d000 	C:\WINDOWS\system32\WS2_32.dll
+0x000007fefea90000 - 0x000007fefea98000 	C:\WINDOWS\system32\NSI.dll
+0x000007fef9b50000 - 0x000007fef9b8b000 	C:\WINDOWS\system32\WINMM.dll
+0x000007fefbb30000 - 0x000007fefbb3c000 	C:\WINDOWS\system32\VERSION.dll
+0x0000000077970000 - 0x0000000077977000 	C:\WINDOWS\system32\PSAPI.DLL
+0x0000000071270000 - 0x000000007127f000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\verify.dll
+0x0000000070aa0000 - 0x0000000070ac9000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\java.dll
+0x0000000071250000 - 0x0000000071266000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: psd2.hackathon.AccountDetails
+java_class_path (initial): C:\work\jars\httpclient-4.4.1.jar;C:\work\jars\httpcore-4.4.3.jar;C:\work\jars\commons-logging-1.2.jar;C:\work\jars\json-20140107.jar;C:\work\jars\jfreechart-1.0.19.jar;C:\work\jars\jcommon-1.0.8.jar;\\udnbnor.net\DfsRoot\Home\AB62031\My Documents\NetBeansProjects\PSD2 Hackathon\build\classes
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_131
+CLASSPATH=.;C:\Program Files (x86)\Java\jre7\lib\ext\QTJava.zip;C:\Program Files (x86)\Grid-Tools\GTDatamaker\ojdbc14.jar;C:\Program Files (x86)\Grid-Tools\GTDatamaker\xalan.jar;C:\Program Files (x86)\Grid-Tools\GTDatamaker\gt_crypt.jar
+PATH=C:\sybase\OCS-12_5\bin\;C:\sybase\OLEDB\;C:\sybase\ADO.NET\dll\;C:\sybase\OCS-12_5\dll\;C:\sybase\JS-12_5\bin\;C:\sybase\ODBC\;C:\sybase\OCS-12_5\lib3p\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Citrix\System32\;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Citrix\ICAService\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\Virtual Desktop Agent\;C:\Program Files (x86)\Common Files\Citrix\System32;C:\SYBASE\DLL;C:\SYBASE\BIN;C:\Users\admin\Ostia Solutions\utils\7za920;C:\Program Files (x86)\WinMerge;C:\Program Files\nodejs\;C:\WINDOWS\System32;C:\Users\AB62031\apache-maven-3.3.9\bin;C:\Users\AB62031\AppData\Roaming\npm
+USERNAME=AB62031
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.23864)
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 62 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, tsc
+
+Memory: 4k page, physical 8388152k(1669488k free), swap 12579572k(5336k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.60-b23) for windows-amd64 JRE (1.8.0_60-b27), built on Aug  4 2015 11:06:27 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Sep 05 14:15:07 2017
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
